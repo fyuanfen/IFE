@@ -1,16 +1,43 @@
 <html>
 <head>
-<link rel="stylesheet" href="index.css"></link>
-</head>
+<style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #center{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      height:200px;
+      margin: -100px -200px;
+      background: #ccc;
+    }
+    #left,#right {
+      	position:absolute;
+    	border-radius: 50px;
+    	border:50px solid transparent;
+    }
+    #left {
+    	top:-50px;
+    	left:-50px;
+    	border-bottom-color:#fc0;
+    	transform:rotate(-45deg);
+    }
+    #right {
+    	bottom:-50px;
+    	right:-50px;
+    	border-top-color:#fc0;
+    	transform:rotate(-45deg);
+    }
+    </style></head>
 <body>
-<div class="wrapper">
-  <div class="content">
-    <div class="left-top"></div>
- <div class="right-bottom"></div>
+  <div id="center">
+    <div id="left"></div>
+ <div id="right"></div>
 
   </div>
  
-  
-</div>
-</body>
+  </body>
 </html>
