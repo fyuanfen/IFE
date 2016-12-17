@@ -1,0 +1,146 @@
+
+
+body {
+    font-size:14px;
+    margin:0;
+    padding:0;
+    border:0;
+    background: #DEDEDE;
+    min-width:750px;
+}
+.header {
+    height:70px;
+    width:100%;
+    background: #333333;
+    display: table;
+
+}
+.header span{
+    display:table-cell;
+    height:70px;
+    vertical-align: middle;
+}
+.header span img{
+    margin-left: 35px;
+    cursor: pointer;
+}
+nav ul{
+    float:right;
+    margin:0;
+    padding:0;
+}
+nav ul li{
+    float:left;
+    line-height:70px;
+    margin-right:20px;
+    vertical-align: middle;
+}
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color:gray;
+}
+aside{
+    background: #FFFFFF;
+    float:right;
+    margin-top: 40px;
+    width:350px;
+    margin-right: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px #848484;
+}
+
+.aside{
+    padding-left: 10px;
+    border-left: 3px #ccc solid;
+}
+form{
+    width: 100%;
+    min-width: 300px;
+}
+form>div{
+    margin: 10px 0;
+}
+.input_message{
+    font-size:13px;
+    width:30%;
+    text-align:right;
+    margin-top:10px;
+    margin-right:20px;
+    display: inline-block;
+    vertical-align:top;
+}
+.demand{
+    font-size:13px;
+    margin-left:37.5%;
+    color:gray;
+}
+.aside-right{
+    display: inline-block;
+    width:60%;
+    vertical-align: bottom;
+}
+
+textarea{
+    margin-top: 10px;
+    width: 50%;
+    height: 100px;
+    margin-left: -7px;
+}
+
+input[type='submit']{
+    width: 100%;
+    height: 40px;
+    background: #3355D0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    border:1px solid #3355D0;
+    font-weight: 800;
+}
+
+article {
+    margin-top: 40px;
+    background-color: #FFF;
+    margin-left: 40px;
+    margin-right: 450px;
+    padding: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px #848484;
+}
+
+
+figure{
+    height:120px;
+    width: 140px;
+    border: 1px solid #aaa;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+figure img{
+width:98px;
+    height: 87px;
+}
+figcaption{
+    padding: 5px;
+}
+.color_gray{
+    color:gray;
+}
+footer{
+
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 60px;
+
+}
