@@ -20,6 +20,16 @@
 2. 学习使用绝对定位实现蒙版重叠效果
 
 ## Task7:实现精美的官网页面架构及样式布局
+1. 学习使用inline-block布局
+2. 中文兼容字体设置问题
+3. 通过CSS的hover实现导航条的悬停特效
+4. 美化的下拉列表样式
+5. 使用border属性实现三角形的绘制
+6. 修改输入框placeholder文字默认颜色
+7. input输入框大小无法设置的问题
+
+[演示地址](http://www.zyy1217.com/project/task7/)
 
 [学习笔记](https://github.com/fyuanfen/IFE/blob/master/task7/task7.md)
+
 

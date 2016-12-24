@@ -42,7 +42,7 @@ hover的时候改变导航条字体颜色，同时下方有动画托条的过渡
 
 
 
-# 4. 下拉列表的实现
+# 4. 美化下拉列表样式
 
 HTML中有select标签可以实现下拉框，可是默认样式实在是太丑了。除了使用插件外，也有多种方式实现下拉列表的美化
 ## 1. 用纯css改变下拉列表select框的默认样式
@@ -98,11 +98,11 @@ http://www.dowebok.com/demo/196/
 
 [css 巧用border属性制作各种图形](http://www.manongjc.com/article/86.html)
 
-# 6. 修改输入框placeholder文字默认颜色-webkit-input-placeholder
+# 6. 修改输入框placeholder文字默认颜色
 ```html
 <input type="text" placeholder="姓名："/>
 ```
-我想让input框默认显示的字体颜色是由placeholder，默认的字体颜色是浅灰色的， 然后针对placeholder来设置你自己想要的颜色。
+input框默认显示的字体颜色是由placeholder设定的，其默认字体颜色是浅灰色的， 因此应该针对placeholder来设置你自己想要的颜色。
 
 ```css
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
