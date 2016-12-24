@@ -7,7 +7,7 @@
 3. 学习float的原理，以及布局时清除浮动的方法
 
 
-
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/task4/task4.md)
 
 ## Task5：静态网页布局一
 
@@ -21,4 +21,5 @@
 
 ## Task7:实现精美的官网页面架构及样式布局
 
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/task7/task7.md)
 
