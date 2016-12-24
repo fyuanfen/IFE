@@ -1,4 +1,8 @@
 
+呼呼，第一个完整的WEB网页项目总算做好了，因为是边学边做，同步记笔记，每个知识点都认真钻研，所以足足花了三四天才做好。不过收获也很大呐~~~
+
+满满的成就感ING,开森..
+下面是网页的[演示地址](http://www.zyy1217.com/project/task7/)
 # 1. 使用inline-block布局
 
 网页的页眉使用inline-block进行布局，并使用了相对定位，且利用font-size:0消除inline-block的间距
