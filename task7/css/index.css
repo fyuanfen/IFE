@@ -1,5 +1,8 @@
 
-
+body{
+    /*padding:0;*/
+    margin:0;
+}
 .container {
     width: 100%;
     min-width: 1280px;
@@ -740,7 +743,7 @@ box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
 
 #section-9 {
     width:100%;
-    margin:120px 0;
+    margin:120px 0 0 0;
     box-sizing: border-box;
     border: 1px solid black;
   text-align: center;
