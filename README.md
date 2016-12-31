@@ -14,12 +14,13 @@
 1. label标签与表单元素的绑定
 2. 学会自适应网页布局
 
-## Task6:通过HTML及CSS模拟报纸排版
+## Task6: 通过HTML及CSS模拟报纸排版
 
 1. 学习CSS字体兼容
 2. 学习使用绝对定位实现蒙版重叠效果
 
-**## Task7:实现精美的官网页面架构及样式布局**
+
+## Task7: 实现精美的官网页面架构及样式布局**
 
 1. 学习使用inline-block布局
 2. 中文兼容字体设置问题
@@ -34,7 +35,7 @@
 
 [学习笔记](https://github.com/fyuanfen/IFE/blob/master/task7/task7.md)
 
-## Task8:响应式网格（栅格化）布局
+## Task8: 响应式网格（栅格化）布局
 
 1. 学习媒体查询
 2. 学习CSS预处理器SCSS的使用
@@ -55,11 +56,13 @@
 1. 学习兼容移动端的弹性布局
 2. 注意媒体查询的格式`@media all and ()`,其中and后面必须要有个空格
 
- # 第二阶段：javascript篇
+
+# 第二阶段：javascript篇
+
+
+## Task13：
  
- ## Task13：
- 
-1.  学会封装函数：
+1. 学会封装函数：
 ```javascript
 var $ = function (id) {
 return document.getElementById(id);
@@ -85,12 +88,12 @@ return document.getElementById(id);
    
 3. 学习了javascript中in操作符(for..in)、Object.keys()和Object.getOwnPropertyNames()的区别
   
- [参考文章](http://www.cnblogs.com/wujie520303/p/4931384.html?utm_source=tuicool&utm_medium=referral)
+[参考文章](http://www.cnblogs.com/wujie520303/p/4931384.html?utm_source=tuicool&utm_medium=referral)
+
+4. mouseover和mouseenter的区别
  
-4.mouseover和mouseenter的区别
- 
- [参考文章](http://www.cnblogs.com/kingwell/archive/2012/09/09/2677258.html)
+[参考文章](http://www.cnblogs.com/kingwell/archive/2012/09/09/2677258.html)
  
  
- ## 演示地址：
+[演示地址](http://zyy1217.com/project/task17/)
    
