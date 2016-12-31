@@ -1,0 +1,85 @@
+$pdValue:10px;
+$height:50px;
+$bd:#999 solid 1px;
+$bgColor:#eee;
+
+//reset css style
+@mixin resetCss{
+  padding:0;
+  margin:0;
+
+}
+
+@mixin clearFix{
+  content:"";
+  display:table;
+  clear:both;
+
+
+}
+
+//innerStyle
+@mixin innerStyle{
+  height:$height;
+  background-color:$bgColor;
+  border:$bd;
+}
+//outStyle
+@mixin outStyle{
+  float:left;
+  box-sizing:border-box;
+  padding:$pdValue;
+}
+//generate Gird
+@mixin generateGird($flag){
+  @if $flag {
+    @for $i from 1 through 12 {
+      .col-md-#{$i} {
+        width: (100% /12 * $i);
+      }
+    }
+  }
+    @else {
+
+    @for $i from 1 through 12{
+      .col-sm-#{$i}{
+        width:(100% /12 * $i);
+      }
+
+  }
+  }
+
+}
+
+//style part
+html, body{
+  @include resetCss;
+
+}
+.wrapper{
+  width:100%;
+  box-sizing: border-box;
+  padding:10px;
+
+}
+
+.wrapper{
+
+  &:before,
+  &:after{
+@include  clearFix;
+  }
+
+}
+.outer{
+  @include outStyle;
+}
+.inner{
+  @include innerStyle;
+}
+@media only screen and (min-width: 769px){
+  @include generateGird(true);
+}
+@media only screen and (max-width: 768px){
+  @include generateGird(false);
+}

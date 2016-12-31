@@ -82,7 +82,7 @@ http://www.dowebok.com/demo/196/
     justify-content: center;
     align-self: flex-start;
     width:0;
-    height:0px;
+    height:0;
     border: 20px solid transparent;
     border-left-color: #FFF;
 }
@@ -98,7 +98,21 @@ http://www.dowebok.com/demo/196/
 
 [css 巧用border属性制作各种图形](http://www.manongjc.com/article/86.html)
 
-# 6. 修改输入框placeholder文字默认颜色
+# 6. 巧用radio单选框模拟js点击事件
+
+阶段一的任务不能用JS，为了增强页面的交互性，我们最终用radio单选框成功的模拟了JS的点击事件。
+
+1. 页面结构：
+给input标签设置width和height，然后通过定位，使其与目标元素重合，并且覆盖在目标元素上（这里可以使用z-index属性），最后将input标签透明度设置为0（opacity=0）。
+
+2. 点击事件模拟：
+使用::checked伪元素，结合'+','~'选择器，在radio被选中后，选择器选择到单选框的兄弟元素，然后便可以设置目标元素点击后的样式了，而且还可以通过给目标元素设置transition属性，使样式的转变更加美观。
+
+3. 限制因素：
+input标签必须是目标元素的兄弟元素，且并是目标元素的“哥哥”。
+
+
+# 7. 修改输入框placeholder文字默认颜色
 ```html
 <input type="text" placeholder="姓名："/>
 ```
@@ -123,7 +137,7 @@ input::-webkit-input-placeholder{
 ```
 
 
-# 7. input输入框大小无法设置的问题
+# 8. input输入框大小无法设置的问题
 
 height和width是实际输入框宽高度，input 元素是可替换元素，根据type值的不同有不同的表现形式
 

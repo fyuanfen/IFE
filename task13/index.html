@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Task 01</title>
+</head>
+<body>
+
+<label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+<button id="button">确认填写</button>
+
+<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+
+<script type="text/javascript">
+
+
+    (function () {
+        var $ = function (id) {
+            return document.getElementById(id);
+        };
+
+        var handler = function () {
+            var num = parseInt($("aqi-input").value);
+            if ((!isNaN(num)) && (num < 500) && (num > 0)) {
+                $("aqi-display").innerHTML = num;
+
+            }
+            else {
+                alert($("aqi-input").value + "不是有效的输入数字，请输入0-500的数字");
+            }
+        };
+            $("button").onclick = function(){
+                handler();
+
+            };
+            $("aqi-input").onkeyup = function (event) {
+                if (event.keyCode==13){
+                    handler();
+                }
+
+
+
+            }
+
+
+
+    })();
+
+</script>
+</body>
+</html>

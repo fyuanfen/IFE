@@ -1,0 +1,36 @@
+
+table {
+    width: 300px;
+}
+table thead th{
+    background-color: #000;
+    color:#fff;
+    text-align:left;
+
+}
+
+table tbody tr:nth-child(even){
+    background-color: #bbb;
+
+}
+table tbody tr:nth-child(-n+3) td {
+    color: red;
+}
+
+input{
+    margin:10px 0;
+width:100px;
+    border:1px solid red;
+    transition: border-color,width .5s;
+
+}
+input:focus{
+    width:200px;
+    border-color: blue;
+
+}
+.banner{
+    height:200px;
+    width:200px;
+
+}

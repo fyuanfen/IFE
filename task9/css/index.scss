@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+* {
+  margin:0;
+  padding:0;
+}
+
+@mixin flex($justify-content:flex-start,$align-items: flex-start ){
+  display:flex;
+  justify-content:$justify-content;
+  align-items: $align-items;
+}
+
+$headColor:#4088B9;
+$asideColor:#2B2E3C;
+$contentColor:#EEEEEE;
+$fontBright:#F1F0EE;
+$fontDark:#586474;
+
+body{
+  width:100%;
+  min-width: 1200px;
+}
+header{
+  width:100%;
+  height:50px;
+  background-color:$headColor;
+  @include flex(space-between,center);
+
+  .left{
+    margin-left:50px;
+  }
+  .right{
+    width:30%;
+    margin-right:80px;
+    @include flex(space-between,center);
+
+    input{
+      width:70%;
+      height:30px;
+      border:1px solid #FFF;
+      border-radius: 20px;
+      background: #FFF url('../image/zoom.png') no-repeat 15px 7px;
+
+    }
+    button{
+      width:20%;
+      height:30px;
+      border:none;
+      color:#FFF;
+      background: $headColor url('../image/login.png') no-repeat left;
+    }
+  }
+
+}
+
+
+/*style of aside*/
+.container {
+  width: 100%;
+  height: 1000px;
+
+  @include flex(flex-start, stretch);
+
+  .aside {
+    width: 20%;
+    background-color: $asideColor;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    //侧边栏名称
+    .head {
+      height: 100px;
+      @include flex(center, center);
+      .round {
+        border: 1px solid #B9BABE;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        @include flex(center, center);
+        span {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          background-color: #B9BABE;
+        }
+      }
+
+      strong{
+        color:$fontBright;
+        font-size:15px;
+        margin-left:15px;
+      }
+
+  }
+
+    //COLLECT ,FANS
+    .info{
+      @include flex(center,center);
+
+      p{
+        padding:0 30px;
+        font-size:14px;
+
+        color:$fontDark;
+        a{
+          text-decoration: none;
+
+          color:$fontDark;
+        }
+      }
+      p:first-of-type{
+        border-right:1px solid #333646;
+
+      }
+    }
+
+    //list
+    .list{
+      margin-top:30px;
+      font-size:12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+
+      i{
+        display:inline-block;
+        height:12px;
+        width:12px;
+        line-height:12px;
+      }
+
+      li>a{
+        margin:150px 0;
+      }
+      li.cur ul li ul{
+        margin-left: 40px;//三级标签
+      }
+      li{
+        width:80%;
+        list-style: none;
+        line-height: 25px;
+        margin:5px 0;
+
+
+        &>ul{//文档初始隐藏
+            max-height: 0px;
+            transition: all linear  0.5s;
+            overflow-y: hidden;
+          }
+        &:hover>ul{
+          //当hover时，子元素的ul可以展开
+          max-height: 200px;
+
+        }
+
+        &:hover {
+          color: white;
+          background-color: #393e4c;
+        }
+
+
+        i{
+          margin-right:10px//一级标签间距大些
+        }
+        a{
+          text-decoration: none;
+          color:$fontDark;
+          }
+
+        ul{
+          margin-left:20px;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+
+        }
+
+        }
+
+
+      li.cur>a,li.open>a,li.select>a{
+        color:$fontBright;
+      }
+
+    }
+
+  }//ASIDE
+
+
+  //CONTENT
+  .content{
+    width:100%;
+    header{
+      background-color: #FFF;
+      color:$fontDark;
+      height: 3%;
+      p{
+        font-size:10px;
+        padding-left:20px;
+        color:gray;
+        span{
+          margin:0 10px;
+        }
+        span:last-of-type{
+          color:$headColor;
+        }
+      }
+
+    }
+
+    .down{
+      width:100%;
+      height:97%;
+      padding:20px;
+      background-color: $contentColor;
+      flex-direction: column;
+      @include flex(flex-start,center);
+
+      section{
+        width:90%;
+        height:80px;
+        margin:10px 0;
+
+        background-color: #FFF;
+        padding-top:20px;
+        @include flex(flex-start,flex-start);
+        &>div{
+            margin:0 35px;
+          span{
+              color:gray;
+              font-size: 12px;
+          }
+
+          }
+
+        .query_time{
+          @include flex(space-between,flex-start);
+
+        }
+
+        }
+      }
+
+
+    }
+  }
+
+
+
+
+
+
+
+

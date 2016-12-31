@@ -1,0 +1,38 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1482934401856'); /* IE9*/
+  src: url('iconfont.eot?t=1482934401856#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1482934401856') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1482934401856') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1482934401856#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:14px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 7px;
+}
+
+.icon-star:before { content: "\e606"; }
+
+.icon-filezhuanhuan:before { content: "\e607"; }
+
+.icon-folder:before { content: "\e629"; }
+
+.icon-5:before { content: "\e643"; }
+
+.icon-arrow:before { content: "\e65a"; }
+
+.icon-account:before { content: "\e660"; }
+
+.icon-record:before { content: "\e6c6"; }
+
+.icon-share:before { content: "\e637"; }
+
+.icon-222calender:before { content: "\e6ed"; }
+
+.icon-twofilesfolders:before { content: "\e66a"; }
+
