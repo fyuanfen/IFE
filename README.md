@@ -7,7 +7,7 @@
 3. 学习float的原理，以及布局时清除浮动的方法
 
 
-[学习笔记](https://github.com/fyuanfen/IFE/blob/master/task4/task4.md)
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/1-4/task4.md)
 
 ## Task5：静态网页布局一
 
@@ -20,7 +20,7 @@
 2. 学习使用绝对定位实现蒙版重叠效果
 
 
-## Task7: 实现精美的官网页面架构及样式布局**
+## Task7: 实现精美的官网页面架构及样式布局
 
 1. 学习使用inline-block布局
 2. 中文兼容字体设置问题
@@ -33,7 +33,7 @@
 
 [演示地址](http://www.zyy1217.com/project/task7/)
 
-[学习笔记](https://github.com/fyuanfen/IFE/blob/master/task7/task7.md)
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/1-7/task7.md)
 
 ## Task8: 响应式网格（栅格化）布局
 
@@ -55,8 +55,8 @@
 
 1. 学习兼容移动端的弹性布局
 2. 注意媒体查询的格式`@media all and ()`,其中and后面必须要有个空格
-[学习笔记]()
-[学习笔记]()
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/1-10/task10.md)
+
 # 第二阶段：javascript篇
 
 
@@ -77,7 +77,8 @@ return document.getElementById(id);
  
 3. 判断文本是否只包含中英文
 
-[学习笔记]() 
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/2-15/task15.md) 
+
 
 ## Task17:
 
@@ -90,10 +91,14 @@ return document.getElementById(id);
 [参考文章](http://www.cnblogs.com/wujie520303/p/4931384.html?utm_source=tuicool&utm_medium=referral)
 
 4. mouseover和mouseenter的区别
+
  
 [参考文章](http://www.cnblogs.com/kingwell/archive/2012/09/09/2677258.html)
+
  
-[学习笔记]()
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/2-17/task17.md)
+
+
 [演示地址](http://zyy1217.com/project/task17/)
 
 
@@ -103,6 +108,7 @@ return document.getElementById(id);
 
 2. 添加事件监听程序时，需要对处理程序handler进行封装
 
+
 eg:
 
 ```javascript
@@ -110,4 +116,5 @@ addEventhandler(item,'click',function(){
 	que.leftPop();
 });
 ```
+
 ## Task19:
