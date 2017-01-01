@@ -1,4 +1,9 @@
 # Task17:
+
+ 
+[演示地址](http://zyy1217.com/project/task17/)
+
+
 ## 1. 学习JS设置CSS样式的几种方式
 
 
@@ -55,6 +60,4 @@
  
  [参考文章](http://www.cnblogs.com/kingwell/archive/2012/09/09/2677258.html)
  
- 
-[演示地址](http://zyy1217.com/project/task17/)
    
