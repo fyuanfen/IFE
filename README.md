@@ -55,8 +55,8 @@
 
 1. 学习兼容移动端的弹性布局
 2. 注意媒体查询的格式`@media all and ()`,其中and后面必须要有个空格
-
-
+[学习笔记]()
+[学习笔记]()
 # 第二阶段：javascript篇
 
 
@@ -77,9 +77,8 @@ return document.getElementById(id);
  
 3. 判断文本是否只包含中英文
 
-    
-    
-    
+[学习笔记]() 
+
 ## Task17:
 
 1. 学习了JS设置CSS样式的几种方式
@@ -94,6 +93,21 @@ return document.getElementById(id);
  
 [参考文章](http://www.cnblogs.com/kingwell/archive/2012/09/09/2677258.html)
  
- 
+[学习笔记]()
 [演示地址](http://zyy1217.com/project/task17/)
-   
+
+
+## Task18： 模拟队列
+
+1. 学习js的队列操作
+
+2. 添加事件监听程序时，需要对处理程序handler进行封装
+
+eg:
+
+```javascript
+addEventhandler(item,'click',function(){
+	que.leftPop();
+});
+```
+## Task19:

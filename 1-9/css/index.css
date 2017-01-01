@@ -103,7 +103,7 @@ header {
         line-height: 25px;
         margin: 5px 0; }
         .container .aside .list li > ul {
-          max-height: 0px;
+          max-height: 0;
           transition: all linear  0.5s;
           overflow-y: hidden; }
         .container .aside .list li:hover > ul {
