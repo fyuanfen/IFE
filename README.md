@@ -117,4 +117,11 @@ addEventhandler(item,'click',function(){
 });
 ```
 
-## Task19:
+## Task19： 排序算法
+未做
+
+## Task20: 队列操作及模糊查询
+1. 学习js正则匹配
+
+
+## Task21: 

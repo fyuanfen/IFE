@@ -18,27 +18,52 @@
     align-items: center;
 }
 
-.up{
+.control{
     width: 80%;
+    margin-bottom: 40px;
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
-.up input{
-    width:25%;
-    border: 1px solid black;
-font-size: .9rem;
-    border-radius: 5px;
+.control textarea{
+    font-size: 1rem;
 }
-.up button{
+.control .right{
+    margin-left:30px;
+}
+
+.control .right button,
+.container .search button{
     height: 35px;
-    width:13%;
-    font-size: .9rem;
+    font-size: .8rem;
     border-radius: 5px;
+    margin:0 0 10px 20px;
     border:1px solid black;
     background-color: #fff;
     cursor: pointer;
 }
+.control .right button{
+    width:40%;
+}
+
+.container .search{
+    width:80%;
+
+}
+
+.container .search button {
+    width:15%;
+    margin-left:40px;
+}
+.search input{
+
+    width:55%;
+    height:30px;
+    border: 1px solid black;
+    font-size: .9rem;
+    border-radius: 5px;
+}
+
 .down {
     box-sizing: border-box;
     margin-top:20px;
@@ -46,18 +71,22 @@ font-size: .9rem;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    }
+}
 
 
 .down .item {
-    width: 45px;
-    height: 45px;
+    height: 30px;
     text-align: center;
-    line-height: 45px;
+    line-height: 30px;
     margin:10px;
-    border-radius: 50%;
+    border-radius: 4px;
     border: 1px solid black;
     cursor: pointer;
 
+}
+
+.down .item .selected{
+    background-color: red;
+    color:#fff;
 }
 
