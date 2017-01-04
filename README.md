@@ -117,11 +117,34 @@ addEventhandler(item,'click',function(){
 });
 ```
 
+[演示地址](http://www.zyy1217.com/project/task18)
 ## Task19： 排序算法
 未做
 
 ## Task20: 队列操作及模糊查询
 1. 学习js正则匹配
 
+2. 学会函数式编程
 
-## Task21: 
+[演示地址](http://www.zyy1217.com/project/task20)
+
+## Task21: 实现个人tag标签
+
+1. 学习函数式编程，实现代码的高级抽象和封装
+
+2. 立即执行函数
+
+3. innerHTML属性，outerHTML属性，textContent属性，innerText属性区别
+
+4. 删除数组指定位置的元素
+
+5. 使用document.activeElement判断是否获得焦点
+
+6. 给父元素的每个字元素添加事件
+
+7. 遍历DOM元素的children属性遇到的坑
+
+[学习笔记]()
+
+[演示地址](http://www.zyy1217.com/project/task21)
+## Task
