@@ -55,6 +55,7 @@
 
 1. 学习兼容移动端的弹性布局
 2. 注意媒体查询的格式`@media all and ()`,其中and后面必须要有个空格
+
 [学习笔记](https://github.com/fyuanfen/IFE/blob/master/1-10/task10.md)
 
 # 第二阶段：javascript篇
@@ -118,6 +119,7 @@ addEventhandler(item,'click',function(){
 ```
 
 [演示地址](http://www.zyy1217.com/project/task18)
+
 ## Task19： 排序算法
 未做
 
@@ -147,4 +149,3 @@ addEventhandler(item,'click',function(){
 [学习笔记]()
 
 [演示地址](http://www.zyy1217.com/project/task21)
-## Task
