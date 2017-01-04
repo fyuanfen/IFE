@@ -146,6 +146,19 @@ addEventhandler(item,'click',function(){
 
 7. 遍历DOM元素的children属性遇到的坑
 
-[学习笔记]()
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/2-21/task21.md)
 
 [演示地址](http://www.zyy1217.com/project/task21)
+
+
+## Task22: js二叉树遍历问题
+
+1. arguments.callee()
+
+回调自身的函数
+
+2. 二叉树问题
+
+[参考资料](http://blog.csdn.net/luckyxiaoqiang/article/details/7518888)
+
+[演示地址](http://www.zyy1217.com/project/task22/)
