@@ -1,0 +1,65 @@
+body {
+    text-align: center;
+}
+
+[class *= level] {
+    display: flex;
+    flex: 1;
+    padding: 10px 0px;
+    margin: 5px;
+    border: 2px solid #5b4563;
+    font-size: .75rem;
+    line-height: 20px;
+    background-color: white;
+}
+.flex-4 {
+    flex: 4;
+}
+.flex-2 {
+    flex: 2;
+}
+.flex-3 {
+    flex: 3;
+}
+.flex-5 {
+    flex: 5;
+}
+.flex-6 {
+    flex: 6;
+}
+
+button {
+    display: inline-block;
+    margin: 20px;
+    width: 100px;
+    line-height: 20px;
+    background-color: white;
+    border: 2px solid #5b4563;
+    border-radius: 5px;
+    font-size: .75rem;
+}
+button:hover {
+    background-color: #5b4563;
+    color: white;
+    cursor: pointer;
+}
+input {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    border: 2px solid #5b4563;
+    border-radius: 5px;
+    outline: none;
+}
+span {
+    display: inline-block;
+    width: 200px;
+    line-height: 20px;
+    padding: 5px;
+    color: #5b4563;
+    border: 2px solid #5b4563;
+}
+
+.active{
+    background-color: red;
+}
