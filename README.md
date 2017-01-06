@@ -60,7 +60,6 @@
 
 # 第二阶段：javascript篇
 
-
 ## Task13：
  
 1. 学会封装函数：
@@ -162,3 +161,12 @@ addEventhandler(item,'click',function(){
 [参考资料](http://blog.csdn.net/luckyxiaoqiang/article/details/7518888)
 
 [演示地址](http://www.zyy1217.com/project/task22/)
+
+[学习笔记](https://github.com/fyuanfen/IFE/blob/master/2-22/task22.md)
+
+## Task23: 
+
+1. 为什么使用setTimeout替代setInterval
+[你真的了解setTimeout和setInterval吗](http://qingbob.com/difference-between-settimeout-setinterval/)
+
+2. 学会事件代理和函数封装

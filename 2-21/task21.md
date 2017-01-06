@@ -102,21 +102,45 @@ function isFocus(){
 有两种方式：
 
 1. 手动遍历dom元素的children
-2. 直接给父元素添加事件，根据event.target判断具体的元素。
-可以根据target的其他属性限定具体响应的元素
+2. 直接给父元素添加事件，对所有的子元素增加点击事件的监听
 
-eg:
 ```javascript
-addHandler(that.output,'mouseover',function (e) {
-           if(e.target && e.target.nodeName == "SPAN") {...
-           }
-   }
-           
-                        
+// 事件代理
+function delegateEvent(element, tag, eventName, listener) {
+    addEvent(element, eventName, function (e) {
+        var event = e || window.event;
+        var target = event.target || event.srcElement;
+        if (target && target.tagName === tag.toUpperCase()) {
+            listener.call(target, event);
+        }
+    });
+}
+
+// 使用示例
+// 还是上面那段HTML，实现对list这个ul里面所有li的click事件进行响应
+$.delegate($("#list"), "li", "click", clickHandle);
+```
+## 6. 判断各种数据类型：
+```javascript
+// 判断arr是否为一个数组，返回一个bool值
+function isArray(arr) {
+    return '[object Array]' === Object.prototype.toString.call(arr);
+}
+
+//判断fn是否为一个函数，返回一个bool值
+function isFunction(fn) {
+    // chrome下,'function' == typeof /a/ 为true.
+    return '[object Function]' === Object.prototype.toString.call(fn);
+}
 ```
 
-## 6.遍历DOM元素的children属性遇到的坑
-关于DOM元素的children属性，以前我只在意它和childNodes属性的区别：即children属性只会返回子元素节点集合，而childNodes返回的就不止元素节点，还有文本节点等所有子节点集合。这样看来，children似乎是我们获取子元素而舍弃其他类型的子节点的最佳选择，虽然说在IE8-的浏览器下用它还会返回注释节点，但兼容起来也是很简单的。
+isArray 使用’instanceof’或者'Array.constructor'判断，在跨iframe的情况下，有不同Array定义。考虑使用Object.prototype.toString方式判断更准确。
+
+isFunction 问题同上。另外，在较老的chrome浏览器上，正则表达式(/a/)使用’typeof’判断的结果也是’function’。因此使用toString的方式判断更准确。
+
+
+## 7.遍历DOM元素的children属性遇到的坑
+关于DOM元素的children属性，以前我只在意它和childNodes属性的区别：即children属性只会返回子元素节点集合，而childNodes返回的就不止元素节点，还有文本节点等所有子节点集合。
 
 我们知道，children返回的子元素集合实际上是一个类似数组的HTMLCollection对象，那接下来我们要获取每个子元素自然要遍历它咯，但是一遍历，问题就出来了：
 ```javascript
@@ -134,7 +158,7 @@ addHandler(that.output,'mouseover',function (e) {
     </script>
  ```   
     
-    上面的代码使用了for-in进行遍历，但我们预料中的结果并未出现，以chrome为例，运行结果是这个：
+  上面的代码使用了for-in进行遍历，但我们预料中的结果并未出现，以chrome为例，运行结果是这个：
     
  ![Untitled Image](http://images.zyy1217.com/FrNrT)
  
@@ -144,42 +168,6 @@ addHandler(that.output,'mouseover',function (e) {
 1. 多返回了length等几个在数组应该是不可枚举的属性。
 2. 把有id的元素重复了两次。
 
-### 关于问题1
-
-我们先讨论第一点，这里要考虑for-in循环遍历对象时的规则比较奇葩：对象自身和继承到的可枚举属性都会被遍历到。所以为确定多遍历到的内容到底是自身还是原型上的属性，我们来验证一下：
-```javascript  
-    console.log(Object.keys(o)); //["0","1","2","i","ii"]
-    console.log(Object.getOwnPropertyNames(o)); //["0","1","2","i","ii"]
-    ```  
-Object.keys()方法返回的是可枚举的自身属性的属性名组成的数组，而Object.getOwnPropertyNames()返回的是所有自身属性的属性名组成的数组（含可枚举和不可枚举）。在这里我们没有看到length、item()、namedItem()三个属性的身影，由此断定他们不是HTMLCollection对象自身的属性，但既然能被for-in遍历到那就只能是来自HTMLCollection原型的可枚举属性。我们可以用Object.getOwnPropertyDescriptor()来验证其在原型上的可枚举性：
-
-```javascript  console.log(Object.getOwnPropertyDescriptor(o.__proto__, 'length').enumerable); //true
-    console.log(Object.getOwnPropertyDescriptor(o.__proto__, 'item').enumerable); //true
-    console.log(Object.getOwnPropertyDescriptor(o.__proto__, 'namedItem').enumerable); //true
- ```
- 
-### 关于问题2
-
-解决了多出来的三个属性的来源，我们再回过头看看为什么会把有id的元素重复了两次。观察用Object.keys()方法返回的数组，这两次一次用下标做属性名、一次用id名作属性名。但其实两个属性名指向的是同一个对象：
-```javascript  
-    o[0]===o['i'] //true
-    o[1]===o['ii'] //true
-``` 
-可见之所以for-in会把id的元素重复遍历两次，不是因为有id的元素都添加进HTMLCollection对象两次，只是一个元素有了两个属性名而已，这是chrome的情况（我的版本是48.0.2564.116 m），但放到火狐和IE下结果却还有点所不同：
-```javascript  
-    //FF
-    console.log(Object.keys(o)); //["0", "1", "2"]
-    console.log(Object.getOwnPropertyNames(o)); // ["0", "1", "2", "i", "ii"]
-    o[0]===o['i'] //true
-    o[1]===o['ii'] //true
-
-    //IE11
-    console.log(Object.keys(o)); //["i", "ii", "2"]
-    console.log(Object.getOwnPropertyNames(o)); // ["i", "ii", "2"]
-    o[0]===o['i'] //true
-    o[1]===o['ii'] //true
-```  
-    
 ### 小结
 
 这下我们可以得出结论了：children个属性返回的HTMLCollection对象不止能遍历到子元素，还能遍历到来自其原型的length、item()、namedItem()三个属性。而且一旦遍历到的子元素有id，就存在HTMLCollection对象里一个元素会有两个属性名的问题，更让人蛋疼的是各浏览器对这两个属性名的选取各不相同。当然，最根本原因还是因为children属性现在还没被正式纳入标准，在使用这种非标准属性时我们难免遇到一些奇葩的状况。

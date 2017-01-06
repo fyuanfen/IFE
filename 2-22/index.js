@@ -109,6 +109,7 @@ function addHandler(element, type, handler) {
                 TBT.animate();
 
 
+
             });
 
             addHandler(inorder,'click',function (type) {
