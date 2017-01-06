@@ -103,8 +103,6 @@
                     break;
             }
 
-
-
         },
 
         visit: function (query) {
