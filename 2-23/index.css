@@ -8,9 +8,10 @@ body {
     padding: 10px 0px;
     margin: 5px;
     border: 2px solid #5b4563;
-    font-size: .75rem;
+    font-size: .85rem;
     line-height: 20px;
     background-color: white;
+
 }
 .flex-4 {
     flex: 4;
@@ -36,7 +37,7 @@ button {
     background-color: white;
     border: 2px solid #5b4563;
     border-radius: 5px;
-    font-size: .75rem;
+    font-size: .85rem;
 }
 button:hover {
     background-color: #5b4563;

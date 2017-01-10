@@ -127,8 +127,8 @@ function removeClass(element, className) {
                 break;
             }
         }
+        element.className = classNames.join(' ');
     }
-    element.className = classNames.join(' ');
 }
 
 
